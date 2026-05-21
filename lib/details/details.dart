@@ -7,41 +7,21 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Details"),
+        backgroundColor: Colors.blue,
+        leading: BackButton(
+          onPressed: () => context.pop(),
+        ),
+        actions: [
+
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Details Page!!!'),
-            const SizedBox(height: 20,),
-            BackButton(
-              onPressed: () {
-                //context.pop();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: const Text("Click back button."),
-                    duration: Duration(seconds: 2),
-                    backgroundColor: Colors.green,
-                    behavior: SnackBarBehavior.floating,
-                    action: SnackBarAction(
-                      label: "Rollback", 
-                      textColor: Colors.white,
-                      onPressed: () {
-                        context.pop();
-                      }
-                    ),
-                  )
-                );
-              
-              },
-            ),
-          
-            ElevatedButton(
-              onPressed: () {
-
-              }, 
-              child: const Text("Hello..."),
-
-            )
           ],
         ),
       ),
