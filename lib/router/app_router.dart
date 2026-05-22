@@ -1,21 +1,33 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:todo_app_flutter/details/details.dart';
 import 'package:todo_app_flutter/main.dart';
+import 'package:todo_app_flutter/ui/bottom/bottom_navigator.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
-  routes: <RouteBase>[
-    GoRoute(
-      path: '/',
-      builder:(context, state) {
-        return const MainScreen();
+  routes: [
+    ShellRoute(
+      builder: (context, state, child) {
+        return Scaffold(
+          bottomNavigationBar: const BottomNavigator(),
+          body: child,
+        );
       },
-      routes: <RouteBase>[
+      routes: [
         GoRoute(
-          path: '/details',
-          builder: (context, state) {
-            return const DetailScreen();
+          path: '/',
+          builder:(context, state) {
+            return const MainScreen();
           },
+          routes: [
+            GoRoute(
+              path: '/details',
+              builder: (context, state) {
+                return const DetailScreen();
+              },
+            )
+          ]
         )
       ]
     )

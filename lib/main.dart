@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:todo_app_flutter/router/app_router.dart';
+import 'package:todo_app_flutter/ui/bottom/bottom_navigator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,8 +49,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -63,7 +63,6 @@ class _MainScreenState extends State<MainScreen> {
             )
           ],
         ),
-      ),
-    );
+      );
   }
 }
