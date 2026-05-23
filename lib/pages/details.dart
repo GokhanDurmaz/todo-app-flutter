@@ -7,23 +7,6 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Details", 
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight(600)
-          ),
-        ),
-        backgroundColor: Colors.blue,
-        leading: BackButton(
-          color: Colors.white,
-          onPressed: () => context.pop(),
-        ),
-        actions: [
-
-        ],
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
