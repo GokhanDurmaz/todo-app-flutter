@@ -22,7 +22,6 @@ class _BottomNavigatorState extends State<BottomNavigator> {
     return 0;
   }
 
-  // Her bir menü elemanını dikeyde ortalayarak oluşturan yardımcı fonksiyon
   Widget _buildNavItem({
     required int index,
     required IconData icon,
@@ -44,10 +43,9 @@ class _BottomNavigatorState extends State<BottomNavigator> {
           }
         },
         child: Container(
-          // Tıklama alanının tüm dikey sütunu kapsaması için şeffaf arka plan
           color: Colors.transparent, 
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // DİKEYDE KESİN ORTALAMA
+            mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
               Icon(
@@ -55,7 +53,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                 color: itemColor, 
                 size: 24,
               ),
-              const SizedBox(height: 4), // İkon ve yazı arasındaki dengeli boşluk
+              const SizedBox(height: 4),
               Text(
                 label,
                 style: TextStyle(
@@ -76,7 +74,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
     final int currentIndex = _getSelectedPageIndex(context);
 
     return SizedBox(
-      height: 64, // İstediğin ideal ince bar yüksekliği (Artık asla taşma yapmaz)
+      height: 64,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,

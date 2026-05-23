@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:todo_app_flutter/pages/details.dart';
+import 'package:todo_app_flutter/widgets/details.dart';
 import 'package:todo_app_flutter/main.dart';
-import 'package:todo_app_flutter/pages/profile.dart';
-import 'package:todo_app_flutter/ui/bottom/bottom_navigator.dart';
-import 'package:todo_app_flutter/ui/top/appbar.dart';
+import 'package:todo_app_flutter/widgets/profile.dart';
+import 'package:todo_app_flutter/widgets/bottom/bottom_navigator.dart';
+import 'package:todo_app_flutter/widgets/top/appbar.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
